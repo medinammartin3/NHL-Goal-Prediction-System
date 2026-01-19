@@ -1,0 +1,16 @@
+numpy
+pandas
+matplotlib
+seaborn
+requests
+tqdm
+lxml
+plotly
+setuptools
+scikit-learn
+comet_ml
+jupyterlab
+ipywidgets
+streamlit
+wandb
+python-dotenv
