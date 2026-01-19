@@ -124,24 +124,25 @@ class TestModel:
 
 if __name__ == "__main__":
 
-    # Load models
     models = {
-        'LogReg_distance': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/LogReg_Model_with_distance:v7'),
-        'LogReg_angle': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/LogReg_Model_with_angle:v5'),
-        'Logreg_distance_angle': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/LogReg_Model_with_distance_and_angle:v5'),
+        'MLP': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/MLPClassifier:v4'),
+        'CatBoost': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/CatBoostClassifier:v12'),
+        'LightGBM': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/LightGBM:v2'),
+        'Stacking': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/StackingModel:v2'),
         'XGBoost': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/XGB_features_and_hp_tuned:v2'),
-        'Stacking': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/StackingModel:v2')
+        'LogisticRegression': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/LogReg_Model_with_distance_and_angle:v5')
     }
 
     # Models features
     features = {
-        'LogReg_distance': ['Distance'],
-        'LogReg_angle': ['Angle'],
-        'Logreg_distance_angle': ['Distance', 'Angle'],
+        'MLP': ['all'],
+        'CatBoost': ['all'],
+        'LightGBM': ['all'],
+        'Stacking': ['all'],
         'XGBoost': ["Distance", "Angle", "shot_deflected", "shot_slap", "Opponent_Skaters", "empty_net",
                     "Friendly_Skaters", "speed", "time_since_last", "shot_wrist", "shot_wrap-around",
                     "shot_tip-in", "shot_backhand", "shot_snap", "is_rebound"],
-        'Stacking': ['all']
+        'LogisticRegression': ['Distance', 'Angle']
     }
 
     # -- Load test data --

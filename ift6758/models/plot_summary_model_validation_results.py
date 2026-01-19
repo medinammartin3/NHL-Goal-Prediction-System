@@ -120,7 +120,7 @@ if __name__ == "__main__":
         'CatBoost': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/CatBoostClassifier:v12'),
         'LightGBM': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/LightGBM:v2'),
         'Stacking': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/StackingModel:v2'),
-        # 'XGBoost': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/XGB_features_and_hp_tuned:v2'),
+        'XGBoost': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/XGB_features_and_hp_tuned:v2'),
         'LogisticRegression': TestModel('IFT6758--2025-A03/IFT6758.2025-A03/LogReg_Model_with_distance_and_angle:v5')
     }
 
@@ -158,10 +158,20 @@ if __name__ == "__main__":
             X_eval = X_valid
             y_eval = y_valid
         else:
-            X_eval = X_valid[model_features]
-            mask = X_eval.notna().all(axis=1)
-            X_eval = X_eval[mask]
-            y_eval = y_valid[mask]
+            if model_name == 'XGBoost':
+                test_data_X = pd.get_dummies(X_valid, columns=['Type of Shot'], prefix='shot')
+                missing_cols = [shot_type for shot_type in features[model_name] if shot_type not in X_valid.columns]
+                for shot_type in missing_cols:
+                    X_valid[shot_type] = 0
+                X_eval = X_valid[features[model_name]]
+                mask = X_eval.notna().all(axis=1)
+                X_eval = X_eval[mask]
+                y_eval = y_valid[mask]
+            else:
+                X_eval = X_valid[model_features]
+                mask = X_eval.notna().all(axis=1)
+                X_eval = X_eval[mask]
+                y_eval = y_valid[mask]
 
         fpr, tpr, roc_auc, y_prob = model.get_ROC(X_eval, y_eval)
 
