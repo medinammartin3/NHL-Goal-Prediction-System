@@ -15,7 +15,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 sys.path.append(os.path.abspath("../.."))
-from ift6758.models.wandb_utils import WandbLogger
+from src.models.wandb_utils import WandbLogger
 
 
 class LightGBMModel:

@@ -2,8 +2,8 @@
 import os
 import sys
 sys.path.append(os.path.abspath("../"))
-from ift6758.GamesUtils import GamesUtils
-from ift6758.data.Data import Data
+from src.GamesUtils import GamesUtils
+from src.data.Data import Data
 import pandas as pd
 import math
 

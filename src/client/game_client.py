@@ -7,8 +7,8 @@ import os
 import sys
 
 sys.path.append(os.path.abspath("../"))
-from ift6758.features.Pbp_DataFrame import Pbp_to_DataFrame
-from ift6758.features.data_engeneering_2 import apply_feature_engineering
+from src.features.Pbp_DataFrame import Pbp_to_DataFrame
+from src.features.data_engeneering_2 import apply_feature_engineering
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)

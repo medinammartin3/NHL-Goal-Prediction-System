@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name='ift6758',
+    name='src',
     packages=find_packages(),
     version='0.2.0',
     description='NHL Expected Goals Prediction System',

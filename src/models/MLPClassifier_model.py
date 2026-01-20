@@ -17,7 +17,7 @@ from imblearn.pipeline import Pipeline as ImbPipeline
 from sklearn.pipeline import Pipeline
 
 sys.path.append(os.path.abspath("../.."))
-from ift6758.models.wandb_utils import WandbLogger
+from src.models.wandb_utils import WandbLogger
 
 
 class MLPModel:

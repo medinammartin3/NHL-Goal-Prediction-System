@@ -5,8 +5,8 @@ import os
 import base64
 import plotly.express as px
 import plotly.graph_objects as go
-from ift6758.client.serving_client import ServingClient
-from ift6758.client.game_client import GameClient
+from src.client.serving_client import ServingClient
+from src.client.game_client import GameClient
 
 # --- Configuration for Default Model ---
 DEFAULT_WORKSPACE = "IFT6758--2025-A03"

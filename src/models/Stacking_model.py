@@ -19,7 +19,7 @@ load_dotenv()
 from CatBoost_model import CatBoostModel
 from LightGBM_model import LightGBMModel
 sys.path.append(os.path.abspath("../.."))
-from ift6758.models.wandb_utils import WandbLogger
+from src.models.wandb_utils import WandbLogger
 
 
 class StackingModel:

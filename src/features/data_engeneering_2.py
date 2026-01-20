@@ -2,9 +2,9 @@ import os
 import sys
 import pandas as pd
 import numpy as np
-from ift6758.features.data_engeneering_1 import get_multiple_season_df, get_event_distance, get_event_angle
+from src.features.data_engeneering_1 import get_multiple_season_df, get_event_distance, get_event_angle
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))     # /ift6758
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))     # /src
 
 
 #Pour la caracteristique Game Seconds

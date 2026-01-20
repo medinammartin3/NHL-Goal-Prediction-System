@@ -3,10 +3,10 @@ import sys
 import pandas as pd
 import numpy as np
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))     # /ift6758
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))     # /src
 
-from ift6758.features.Pbp_DataFrame import Pbp_to_DataFrame
-from ift6758.visualizations.visualizations import divide_N_zone, get_event_distance
+from src.features.Pbp_DataFrame import Pbp_to_DataFrame
+from src.visualizations.visualizations import divide_N_zone, get_event_distance
 
 
 def get_event_angle(event):

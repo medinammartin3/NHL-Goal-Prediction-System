@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import f1_score, make_scorer
 from sklearn.metrics import roc_auc_score, make_scorer, roc_curve, accuracy_score, precision_score, recall_score
 import xgboost as xgb
-from ift6758.models.wandb_utils import WandbLogger
+from src.models.wandb_utils import WandbLogger
 from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker

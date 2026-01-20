@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import seaborn as sns
 from sklearn.calibration import calibration_curve
-from ift6758.models.wandb_utils import WandbLogger
+from src.models.wandb_utils import WandbLogger
 import joblib
 from scipy.stats import spearmanr
 

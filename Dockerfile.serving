@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements_serving.txt
 
 # Copy application code
 COPY serving/app.py .
-COPY ift6758 ./ift6758
+COPY src ./src
 
 EXPOSE 5000
 

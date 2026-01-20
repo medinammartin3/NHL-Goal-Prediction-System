@@ -12,7 +12,7 @@ from sklearn.calibration import calibration_curve, CalibratedClassifierCV
 from catboost import CatBoostClassifier, Pool
 
 sys.path.append(os.path.abspath("../.."))
-from ift6758.models.wandb_utils import WandbLogger
+from src.models.wandb_utils import WandbLogger
 
 
 class CatBoostModel:

@@ -9,7 +9,7 @@ from sklearn.metrics import roc_curve, accuracy_score, precision_score, recall_s
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
-from ift6758.models.wandb_utils import WandbLogger
+from src.models.wandb_utils import WandbLogger
 import xgboost as xgb
 
 

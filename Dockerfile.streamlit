@@ -12,10 +12,10 @@ RUN pip install --no-cache-dir -r requirements_streamlit.txt
 # Copy application code
 COPY streamlit/streamlit_app.py .
 COPY figures ./figures
-COPY ift6758 ./ift6758
+COPY src ./src
 
 # Install local package for imports
-RUN pip install -e ./ift6758
+RUN pip install -e ./src
 
 EXPOSE 8501
 
