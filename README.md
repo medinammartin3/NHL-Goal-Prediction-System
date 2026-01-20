@@ -100,7 +100,7 @@ NHL-Goal-Prediction/
 ```
 
 
-## Deployed App Architecture 
+## System Architecture 
 
 The application consists of two decoupled microservices:
 
