@@ -9,7 +9,7 @@ ADD ./ift6758 ./ift6758
 
 # Install libraries
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
-RUN pip install --no-cache-dir -r ./ift6758/requirements_serving.txt
+RUN pip install --no-cache-dir -r ./ift6758/client/requirements_serving.txt
 
 # Expose ports
 EXPOSE 5000

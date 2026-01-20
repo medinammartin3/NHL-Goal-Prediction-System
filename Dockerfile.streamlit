@@ -11,7 +11,7 @@ ADD ./ift6758 ./ift6758
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 
 # Install dependencies
-RUN pip install --no-cache-dir -r ./ift6758/requirements_streamlit.txt
+RUN pip install --no-cache-dir -r ./ift6758/client/requirements_streamlit.txt
 
 # Install package ift6758 for imports
 RUN pip install -e ./ift6758
