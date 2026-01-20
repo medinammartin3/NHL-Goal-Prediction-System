@@ -53,13 +53,13 @@ NHL-Goal-Prediction/
 │       - Data collection, cleaning, preprocessing and visualization
 │       - Feature engineering
 │       - Models implementation, training, and evaluation code
-          └── Implemented Models:
-              - Logistic Regression (baseline)
-              - XGBoost
-              - Catboost
-              - LightGBM
-              - MLP
-              - Stacking (MLP + Catboost + LightGBM)
+│         └── Implemented Models:
+│             - Logistic Regression (baseline)
+│             - XGBoost
+│             - Catboost
+│             - LightGBM
+│             - MLP
+│             - Stacking (MLP + Catboost + LightGBM)
 │       - Metrics (validation, testing and analysis utilities)
 │       - Shared helpers and configuration files
 │
